@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    ;box-sizing: border-box;
+}
+body{
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+    background-color: rgb(32, 131, 170);
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.background-div{
+    background:rgba(0, 0, 0, 0.219);
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
+    padding-top: 80px;
+    display: flex;
+    margin: 100px auto;
+    margin-bottom: 120px;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+    max-width: 450px;
+    width: 100%;
+    
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px ;
+    margin-left: -20px;
+    margin-bottom: 50px;
+    height: auto
+}
+.heading{
+    font-size: 40px;
+}
+.header img{
+    height:60px;
+    width: 60px;
+}
+.content{
+    padding-left: 30px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    border-top-right-radius:0 ;
+    border-top-left-radius:0 ;
+    padding-top: 40px;
+}
+.subject{
+    font-family: cursive;
+}
+.content input::placeholder,
+textarea::placeholder{
+    color: rgb(0, 0, 0);
+    
+}
+.content input,
+textarea{
+    background:transparent;
+    border: 0;
+    color: black;
+    outline: 0;
+}
+
+.content textarea{
+    height: 45px;
+    font-size: 15px;
+    max-width: 300px;
+    font-size: 20px;
+    width: 100%;
+    border-bottom: 3px solid black;
+    padding: 10px 25px;
+    padding-bottom: 0;
+    padding-left: 5px;
+    margin-top: 30px;
+
+}
+.content input::before{
+    content: none;
+}
+.content input{
+        padding: 10px 30px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        font-size: 25px;
+        max-width: 300px;
+        width: 100%;
+        border-bottom: 3px solid black ;
+}
+.task-button{
+    background-color: rgb(13, 148, 182);
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    max-width: 180px;
+    width: 100%;
+    box-shadow: 1px 1px 25px rgba(35, 199, 240, 0.76);
+    margin-top: 25px;
+}
+.task-button:hover{
+    background-color: rgba( 35, 199, 240, 0.76);
+}
+.content ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0 10px 0;
+    width: auto;
+    width: 100%;
+}
+
+ul li{
+    list-style: none;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 8px 30px 8px 20px;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.521),rgba(0, 0, 0, 0.514));
+    color: white;
+    border-radius: 20px;
+    min-width: 400px;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+}
+ul li::before{
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 55px;
+    height: 15px;
+    content: "";
+    width: 15px;
+    float: right;
+    background-image: url(Images/unChecked.png);
+    background-size: cover;
+    background-position: center;
+}
+
+ul li span{
+    font-size: 18px;
+    line-height: 25px;
+    
+    height: 15px;
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    top:calc(50% - 8px) ;
+    color: #ffffff;
+    font-size: 16px
+}
+ul li span:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+}
+.cheacked{
+    color: #b9b9b9a6;
+    text-decoration: line-through;
+
+}
+.cheacked::before{
+    background-image: url(Images/Checked.png);
+    background-size: cover;
+    background-position: center;
+    border:0;
+}
+ul li p,
+.editBtn{
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.editBtn{
+    color: white;
+    height: 20px;
+    width: 20px;
+    float: right;
+    float: right;
+    position: relative;
+    top: 3px;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+
+}
+.editBtn:hover{
+    color: white;
+}
+.information{
+    font-size: 18px;
+    font-family: cursive;
+    font-weight: 500;
+}
+
+
+
+@media (max-width : 450px ){
+    .background-div{
+        height: 100svh;
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+}
+@media (max-width : 350px ){
+    .header img{
+        display: none;
+    }
+    .heading{
+        font-size: 30px;
+    }
+    *{
+        padding: 0;
+    }
+}
+
