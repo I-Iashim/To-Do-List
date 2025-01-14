@@ -43,7 +43,7 @@ body{
     width: 60px;
 }
 .content{
-    padding-left: 30px;
+    padding-left: 20px;
     padding-right: 20px;
     display: flex;
     align-items: center;
@@ -127,7 +127,6 @@ ul li{
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.521),rgba(0, 0, 0, 0.514));
     color: white;
     border-radius: 20px;
-    min-width: 400px;
     max-width: 400px;
     width: 100%;
     position: relative;
