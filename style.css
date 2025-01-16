@@ -127,6 +127,7 @@ ul li{
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.521),rgba(0, 0, 0, 0.514));
     color: white;
     border-radius: 20px;
+    min-width: 400px;
     max-width: 400px;
     width: 100%;
     position: relative;
@@ -208,7 +209,7 @@ ul li p,
 @media (max-width : 450px ){
     .background-div{
         height: 100svh;
-        height: auto;
+        height: 100%;
         width: 100%;
         border-radius: 0;
         margin: 0;
@@ -225,4 +226,3 @@ ul li p,
         padding: 0;
     }
 }
-
