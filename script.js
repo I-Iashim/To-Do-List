@@ -4,9 +4,16 @@ let btn = document.querySelector(".content button");
 let discription = document.querySelector("#disciption");
 let listContainer = document.querySelector("#taskLists");
 
+function saveData(){
+    localStorage.setItem("data",listContainer.innerHTML)
+}
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+
 function addTask() {
     btn.innerText = "Add Task";
-    if (userHeading.value === "") {
+    if(userHeading.value === "" ) {
         alert("The Input Box Should Not Be Empty.");
     } else {
         let li = document.createElement("li");
@@ -31,26 +38,36 @@ function addTask() {
             userHeading.value = li.childNodes[0].nodeValue.trim(); 
             discription.value = p.innerText;
             btn.innerText = "Update";
-
-            
             btn.onclick = () => {
+                
                 li.childNodes[0].nodeValue = userHeading.value; 
                 p.innerText = discription.value;
+                li.remove()
+                addTask()
                 btn.innerText = "Add Task";
-                btn.onclick = addTask(); 
+                userHeading.value = "";
+                discription.value = "";
             };
         });
     }
-    userHeading.value = "";
-    discription.value = "";
+    
+        userHeading.value = "";
+        discription.value = "";
+        saveData()
 }
+
 
 listContainer.addEventListener("click",(e) => {
         if (e.target.tagName === "LI") {
             e.target.classList.toggle("cheacked");
+            saveData()
         } else if (e.target.tagName === "SPAN") {
             e.target.parentElement.remove();
+            saveData()
+            
         }
     },
     false
 );
+
+showTask()
