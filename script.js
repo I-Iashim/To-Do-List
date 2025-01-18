@@ -13,7 +13,7 @@ function showTask(){
 
 function addTask() {
     btn.innerText = "Add Task";
-    if(userHeading.value === "" ) {
+    if(userHeading.value.trim() === "" ) {
         alert("The Input Box Should Not Be Empty.");
     } else {
         let li = document.createElement("li");
