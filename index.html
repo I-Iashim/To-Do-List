@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <div class="background-div" name="form">
-        <div class="header">
-            <h1 class="heading">TO-Do List</h1><img src="Images/download.png" alt="" >
-        </div>
-        <div class="content">
-            
-                <input type="text" placeholder="Task..." class="subject" id="task">
-                <textarea placeholder="Discription..." id="disciption" class="disciption" ></textarea>
-                <button onclick="addTask();" class="task-button">Add Task</button>
-            
-            <ul id="taskLists">
-                
-            </ul>
 
+<body>
+    <div class="form-container">
+        <div class="header">
+            <h1 class="heading">TO-Do List</h1>
+            <img src="Images/download.png" alt="" />
         </div>
-        
+
+        <form class="form">
+            <div class="form-group">
+                <label for="email">Task Title</label>
+                <input required="" name="email" id="task" type="text">
+            </div>
+            <div class="form-group">
+                <label for="textarea">Task Discription</label>
+                <textarea cols="50" rows="10" id="disciption" name="textarea"></textarea>
+            </div>
+            <div class="button-box">
+
+                <button class="form-submit-btn task-button" onclick="addTask()" id="addButton">Add Task</button>
+                <button class="task-button form-submit-btn" onclick="clearInput()">Clear</button>
+            </div>
+            <ul id="taskLists">
+
+            </ul>
+        </form>
     </div>
-    
     <script src="script.js"></script>
 </body>
+
 </html>
