@@ -5,36 +5,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
+    <script src="https://kit.fontawesome.com/91f1d83e7d.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="form-container">
+    <div class="background" id="firstBackground">
         <div class="header">
-            <h1 class="heading">TO-Do List</h1>
-            <img src="Images/download.png" alt="" />
+            <h2>Todo List</h2>
         </div>
-
-        <form class="form">
-            <div class="form-group">
-                <label for="email">Task Title</label>
-                <input required="" name="email" id="task" type="text">
+        <div class="date-task">
+            <div class="date-box">
+                <h4>Date</h4>
+                <p id="date"></p>
             </div>
-            <div class="form-group">
-                <label for="textarea">Task Discription</label>
-                <textarea cols="50" rows="10" id="disciption" name="textarea"></textarea>
-            </div>
-            <div class="button-box">
+            <div class="task-box" id="tasks">
 
-                <button class="form-submit-btn task-button" onclick="addTask()" id="addButton">Add Task</button>
-                <button class="task-button form-submit-btn" onclick="clearInput()">Clear</button>
-            </div>
-            <ul id="taskLists">
 
-            </ul>
-        </form>
+
+            </div>
+        </div>
+        <div>
+            <div class="addButton">
+                <div class="add"><i class="fa-solid fa-plus"></i></div>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
-</body>
+    <div class="background hide"  id="secondBackground">
+    <div class=" header">
+        <h2>Add Task</h2>
+    </div>
+    <div class="submit-form">
+        <div class="form-group">
+            <label>Task Title</label>
+            <input required="" id="task" type="text">
+        </div>
+        <div class="form-group">
+            <label>Task Description</label>
+            <textarea cols="50" rows="10" id="disciption" name="textarea"></textarea>
+        </div>
+    </div>
+    <div class="button-box">
+        <button class="form-submit-btn" " id="addButton">Add Task</button>
+        <button class="form-submit-btn" onclick="clearInput()">Clear</button>
+    </div>
+    </div>
 
+    
+</body>
+<script src="script.js"></script>
 </html>
