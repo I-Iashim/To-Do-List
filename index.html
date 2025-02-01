@@ -9,11 +9,10 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
     <div class="background" id="firstBackground">
         <div class="header">
-            <h2>Todo List</h2>
+            <h1>Todo List</h1>
         </div>
         <div class="date-task">
             <div class="date-box">
@@ -28,13 +27,16 @@
         </div>
         <div>
             <div class="addButton">
-                <div class="add"><i class="fa-solid fa-plus"></i></div>
+                <div onclick="clearInput()" class="add"><i onclick="clearInput()" class="fa-solid fa-plus"></i></div>
             </div>
         </div>
     </div>
     <div class="background hide"  id="secondBackground">
     <div class=" header">
-        <h2>Add Task</h2>
+        <h1>Add Task</h1>
+    </div>
+    <div class="backButtonDiv">
+        <button class="backButton" id="backButton">&#8656; Go Back</button>
     </div>
     <div class="submit-form">
         <div class="form-group">
@@ -47,7 +49,9 @@
         </div>
     </div>
     <div class="button-box">
-        <button class="form-submit-btn" " id="addButton">Add Task</button>
+        <button class="form-submit-btn"  id="addButton">Add Task</button>
+        <button class="form-submit-btn hide"  id="updateButton" onclick="addTask()">Update</button>
+        
         <button class="form-submit-btn" onclick="clearInput()">Clear</button>
     </div>
     </div>
