@@ -3,38 +3,44 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 @font-face {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCFPrEHJA.woff2) 
+  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCFPrEHJA.woff2)
 }
+
 body {
   font-family: 'Raleway';
   background-color: rgb(255, 255, 255);
   height: 100svh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
 }
-.container{
+
+.container {
   cursor: pointer;
   color: #7A7777;
   height: 20px;
   width: 20px;
 }
-.container input{
+
+.container input {
   color: #7A7777;
   display: none;
   height: 20px;
   width: 20px;
 }
+
 .container svg {
   color: #7A7777;
   overflow: visible;
   height: 20px;
   width: 20px;
 }
+
 .path {
   fill: none;
   stroke: #7A7777;
@@ -47,13 +53,16 @@ body {
   height: 20px;
   width: 20px;
 }
-.container input:checked ~ svg .path {
+
+.container input:checked~svg .path {
   stroke-dasharray: 70.5096664428711 9999999;
   stroke-dashoffset: -262.2723388671875;
   stroke: rgb(12, 209, 12);
 }
-.background{
-  min-height: 932px;
+
+.background {
+  min-height: calc(800px - 53px);
+  margin-top: 30px;
   height: auto;
   width: 430px;
   color: white;
@@ -61,108 +70,135 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom:53px ;
+  padding-bottom: 53px;
   gap: 40px;
   overflow: hidden;
   border-radius: 40px;
-  box-shadow: 5px 5px 50px 10px #0000;
+  box-shadow: 2px 2px 17px -5px #000000;
 }
-#secondBackground{
+.backButtonDiv{
+  padding-left: 20px;
+}
+.backButton{
+  padding: 8px 20px;
+  border-radius: 20px;
+  position: relative;
+  top: -50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: cursive;
+  background-color:#0AB6AB;
+  border: 0;
+}
+#secondBackground {
   min-height: 750px;
 }
-.header{
-  background-color: #0AB6AB ;
+.header {
+  background-color: #0AB6AB;
   height: 131px;
   width: 430px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.header h2{
+
+.header h1 {
   color: black;
-  font-weight: 900;
-  font-size: 30px;
+  font-weight:bolder;
+  font-size: 35px;
 }
-.date-box{
+
+.date-box {
   padding-left: 20px;
-  color:white ;
+  color: white;
   font-family: 'Raleway';
 }
-.date-box h4{
+
+.date-box h4 {
   font-size: 24px;
   font-weight: bold;
 }
-.date-box p{
+
+.date-box p {
   color: #7D7878;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   padding-left: 5px;
   padding-top: 5px;
   font-family: 'Raleway';
 }
-.task-box{
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+
+.task-box {
   padding: 0 20px 0 20px;
   gap: 5px;
-  position: relative;
-}
-.task{
-  background-color:#201F1F ;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 3px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
+}
+
+.task {
+  background-color: #201F1F;
+  border-radius: 8px;
+  gap: 40px;
   max-width: 382px;
   height: auto;
   padding: 15px 14px
 }
-.task-title-box{
+
+.task-title-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 350px;
   min-width: 350px;
 }
-.task-title-box h3{
-  font-size: 18px;
+
+.task-title-box h3 {
+  font-size: 23px;
   color: #7A7777;
   padding-right: 10px;
   font-weight: 600;
 }
-.task-title-box p{
+
+.task-title-box p {
   margin-top: 2px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   max-width: 135px;
   color: #7A7777;
   padding-right: 10px;
 }
-.task-edit-box{
+
+.task-edit-box {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
 }
-.task-edit-box svg{
+
+.task-edit-box svg {
   height: 20px;
   width: 20px;
   color: #7D7878;
   cursor: pointer;
 }
-.remove-button{
-color: #7D7878;
-font-size: 20px;
-padding: 0;
-text-align: center;
-cursor: pointer;
+
+.remove-button {
+  color: #7D7878;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
 }
-.addButton{
-  height:80px ;
+
+.addButton {
+  height: 80px;
   width: 80px;
   float: right;
   margin-right: 24px;
@@ -174,47 +210,54 @@ cursor: pointer;
   justify-content: center;
   cursor: pointer;
 }
-.add i{
+
+.add i {
   color: black;
   height: 40px;
   width: 40px;
   font-size: 40px;
   filter: drop-shadow(0px 0px 1px black);
 }
-.hide{
-  display: none;
+.task-discription{
+  padding-left: 30px;
 }
-.date-task{
+
+.date-task {
   display: flex;
   gap: 15px;
   flex-grow: 1;
   flex-direction: column;
 }
-#check:checked ~ label{
+
+#check:checked~label {
   text-decoration: line-through;
   color: #525151;
 }
-.form-group{
+
+.form-group {
   display: flex;
   flex-direction: column;
   display: flex;
-  padding-left:20px ;
+  padding-left: 20px;
   flex-direction: column;
   gap: 4px;
 }
-.submit-form{
+
+.submit-form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
 }
-.form-group label{
+
+.form-group label {
   display: block;
   margin-bottom: 5px;
   color: #c0c0c0;
   font-weight: 600;
   font-size: 14px;
 }
+
 .form-group input {
   max-width: 390px;
   padding: 12px 16px;
@@ -224,6 +267,7 @@ cursor: pointer;
   background-color: transparent;
   border: 1px solid #414141;
 }
+
 .form-group textarea {
   max-width: 390px;
   padding: 12px 16px;
@@ -235,15 +279,19 @@ cursor: pointer;
   background-color: transparent;
   font-family: inherit;
 }
+
 .form-group input::placeholder {
   opacity: 0.5;
 }
+
 .form-group input:focus {
   outline: none;
 }
+
 .form-group textarea:focus {
   outline: none;
 }
+
 .button-box {
   display: flex;
   flex-wrap: wrap-reverse;
@@ -252,6 +300,7 @@ cursor: pointer;
   justify-content: center;
   gap: 20px;
 }
+
 .form-submit-btn {
   display: flex;
   align-items: flex-start;
@@ -270,8 +319,13 @@ cursor: pointer;
   cursor: pointer;
   border-radius: 6px;
 }
+
 .form-submit-btn:hover {
   background-color: #fff;
   border-color: #ffffff;
   color: black;
+}
+
+.hide {
+  display: none;
 }
