@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,20 +22,20 @@ body {
 
 .container {
   cursor: pointer;
-  color: #7A7777;
+  color: #acacac;
   height: 20px;
   width: 20px;
 }
 
 .container input {
-  color: #7A7777;
+  color: #acacac;
   display: none;
   height: 20px;
   width: 20px;
 }
 
 .container svg {
-  color: #7A7777;
+  color: #acacac;
   overflow: visible;
   height: 20px;
   width: 20px;
@@ -43,7 +43,7 @@ body {
 
 .path {
   fill: none;
-  stroke: #7A7777;
+  stroke: #acacac;
   stroke-width: 6;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -158,26 +158,22 @@ body {
 }
 
 .task-title-box h3 {
-  font-size: 23px;
-  color: #7A7777;
-  padding-right: 10px;
+  font-size: 20px;
+  color: #acacac;
   font-weight: 600;
 }
 
 .task-title-box p {
   margin-top: 2px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  max-width: 135px;
-  color: #7A7777;
-  padding-right: 10px;
+  color: #acacac;
 }
 
 .task-edit-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   gap: 10px;
 }
 
